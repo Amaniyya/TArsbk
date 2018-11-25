@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Rumah Sakit Sehat Sentosa</title>
+    </h:head>
+    <h:body>
+        
+        <center>
+            <h1>Rumah Sakit Sehat Sentosa</h1>
+            <h:form>
+            <h:dataTable value="#{rssehat.get_all_mahasiswa}" var="rs" width="800px">
+                <h:outputText value="#{rssehat.nama_pasien}"/>
+                <h:column>
+                  <f:facet name="header">Id Pasien</f:facet>
+                  <h:outputText value="#{rs.id_pasien}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama</f:facet>
+                 <h:outputText value="#{rs.nama_pasien}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Alamat</f:facet>
+                 <h:outputText value="#{rs.alamat}"></h:outputText>
+                </h:column>
+<!--                <h:column>
+                    <f:facet name="header">Edit</f:facet>
+                    <h:commandButton value="Edit" action="#{mahasiswa.Edit_Mahasiswa}">
+                      <f:param name="action" value="#{maha.NIM}" />
+                    </h:commandButton>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">Delete</f:facet>
+                    <h:commandButton value="Delete" action="#{mahasiswa.Delete_Mahasiswa}">
+                      <f:param name="action" value="#{maha.NIM}" />
+                    </h:commandButton>
+                  </h:column>-->
+            </h:dataTable>
+            <br></br>
+            </h:form>
+            
+        </center>
+        
+        
+    </h:body>
+</html>
+
